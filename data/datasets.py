@@ -37,6 +37,7 @@ def get_dataset_cls(name):
         return {
             'imagenet': datasets.ImageNet,
             # add your custom dataset class here
+            "cifar": datasets.cifar,
         }[name]
     except KeyError:
         raise KeyError(f"Unexpected dataset name: {name}")
